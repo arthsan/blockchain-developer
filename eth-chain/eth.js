@@ -6,7 +6,7 @@ var url = process.env.INFURA_KEY;
 var web3 = new Web3(url);
 
 var address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-var contractAddress = "0xD850942eF8811f2A866692A623011bDE52a462C1"
+var contractAddress = "0xD850942eF8811f2A866692A623011bDE52a462C1";
 
 const abi = [
   {
@@ -222,12 +222,10 @@ async function main() {
 
   web3.eth.getTransactionCount(address).then(console.log);
 
-  const contract = new web3.eth.Contract(abi, contractAddress);
-  contract.methods.name().call((err, result) => {console.log(result)})
-  contract.methods.symbol().call((err, result) => { console.log(result )})
-  contract.methods.totalSupply().call((err, result) => { console.log(result )})
-
-
+  const contract = await new web3.eth.Contract(abi, contractAddress);
+  console.log(await contract.methods.name().call());
+  console.log(await contract.methods.symbol().call());
+  console.log(await contract.methods.totalSupply().call());
 }
 
 main();
