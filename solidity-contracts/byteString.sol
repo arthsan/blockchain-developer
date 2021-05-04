@@ -1,4 +1,5 @@
 pragma solidity >=0.4.24;
+//"SPDX-License-Identifier: UNLICENSED" 
 
 contract StringBytes {
     // Static byte arrays, Both declarations will create array with 3 byte elements

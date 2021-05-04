@@ -1,5 +1,7 @@
 pragma solidity >=0.4.24;
 
+//"SPDX-License-Identifier: UNLICENSED"
+
 contract ArraysContract {
     // Elementary type array in storage
     // Static Array with size 3 of type int
