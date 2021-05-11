@@ -1,4 +1,5 @@
 pragma solidity >=0.4.24;
+//"SPDX-License-Identifier: UNLICENSED" 
 
 contract StarNotary {
     string public starName;
